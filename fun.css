@@ -138,6 +138,15 @@ p {
     overflow-wrap: break-word; /* Ensures that text will wrap to the next line if it is too long */
 }
 
+.break {
+    font-family: 'Inconsolata', Monospace;
+    text-align: center;
+
+    color: white;
+    font-size: 1.25em; /* PREVIOUSLY 1.125em */
+    overflow-wrap: break-word; /* Ensures that text will wrap to the next line if it is too long */
+}
+
 .nav {
     font-size: 1.25em; /* PREVIOUSLY 1.125em */
     display: flex;
