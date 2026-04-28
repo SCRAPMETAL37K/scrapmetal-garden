@@ -145,7 +145,8 @@ h3 {
     letter-spacing: 1.5px;
     color: rgb(146, 146, 146);
     font-size: 1.375em;
-    font-style: italic;
+    font-weight: normal;
+    font-style: normal;
     margin: 0 0 24px;
     line-height: 1.3;
 }
