@@ -1,0 +1,241 @@
+/* =====================
+           FONTS
+   ===================== */
+
+@font-face {
+    font-family: 'MyTahoma';
+    src: url('src/tahoma.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MyTahoma';
+    src: url('src/tahomabd.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('src/Inconsolata-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('src/Inconsolata-Black.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* =====================
+            BASE
+   ===================== */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0c0c0c;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    overflow-x: hidden;
+}
+
+::selection,
+::-moz-selection {
+    background: white;
+    color: black;
+}
+
+
+/* =====================
+          LAYOUT
+   ===================== */
+
+.title,
+.container {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.title {
+    padding-top: 60px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container {
+    margin-top: 32px;
+    margin-bottom: 80px;
+}
+
+.index {
+    background-color: #0c0c0c;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.ascii {
+    width: 100%;
+    margin: 60px 0;
+    line-height: 1;
+    text-align: center;
+    font-size: clamp(0.35rem, 1.8vw, 1.125rem);
+}
+
+.ascii pre {
+    white-space: pre;
+    display: inline-block;
+    margin: 0;
+    text-align: left;
+}
+
+.logo {
+    height: 50px;
+}
+
+
+/* =====================
+        TYPOGRAPHY
+   ===================== */
+
+h1, h2, h3, p, pre {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+h1 {
+    font-family: 'Inconsolata', monospace;
+    color: white;
+    font-weight: normal;
+    font-size: 2.5em;
+    margin: 0 0 4px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-family: Tahoma, 'MyTahoma', Arial, sans-serif;
+    letter-spacing: 1.5px;
+    color: white;
+    font-weight: bold;
+    font-size: 2.25em;
+    margin: 40px 0 8px;
+    line-height: 1.2;
+}
+
+h3 {
+    font-family: Tahoma, 'MyTahoma', Arial, sans-serif;
+    letter-spacing: 1.5px;
+    color: rgb(146, 146, 146);
+    font-size: 1.375em;
+    font-style: italic;
+    margin: 0 0 24px;
+    line-height: 1.3;
+}
+
+/* tighten spacing between sequential headings */
+h1 + h2 { margin-top: -2px; }
+h2 + h3 { margin-top: -4px; }
+h3 + p  { margin-top: 0;    }
+
+p {
+    font-family: 'Inconsolata', monospace;
+    color: white;
+    font-size: 1.125em;
+    margin: 0 0 20px;
+    overflow-wrap: break-word;
+}
+
+p.break {
+    text-align: center;
+}
+
+pre {
+    font-family: 'Inconsolata', monospace;
+    color: white;
+    font-size: 1em;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* =====================
+          LINKS
+   ===================== */
+
+.link-blue         { color: #008BFF; }
+.link-blue:visited { color: #008BFF; }
+.link-blue:hover   { color: black; background-color: #008BFF; text-decoration: underline; }
+
+.link-red          { color: #FF3738; }
+.link-red:visited  { color: #FF3738; }
+.link-red:hover    { color: black; background-color: #FF3738; text-decoration: underline; }
+
+.link-green         { color: #1ABE14; }
+.link-green:visited { color: #1ABE14; }
+.link-green:hover   { color: black; background-color: #1ABE14; text-decoration: underline; }
+
+.link-yellow         { color: #FF9C00; }
+.link-yellow:visited { color: #FF9C00; }
+.link-yellow:hover   { color: black; background-color: #FF9C00; text-decoration: underline; }
+
+.link-purple         { color: #d400ff; }
+.link-purple:visited { color: #d400ff; }
+.link-purple:hover   { color: black; background-color: #d400ff; text-decoration: underline; }
+
+.link-white         { color: white; }
+.link-white:visited { color: white; }
+.link-white:hover   { color: black; background-color: white; text-decoration: underline; }
+
+.link-secret         { color: #0c0c0c; }
+.link-secret:visited { color: #0c0c0c; }
+.link-secret:hover   { color: white; background-color: gray; text-decoration: underline; }
+
+
+/* =====================
+          MOBILE
+   ===================== */
+
+@media (max-width: 600px) {
+    .title,
+    .container,
+    .ascii {
+        padding: 0 18px;
+    }
+
+    .title {
+        padding-top: 36px;
+    }
+
+    .container {
+        margin-top: 20px;
+        margin-bottom: 48px;
+    }
+
+    .ascii {
+        margin: 36px 0;
+    }
+
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.75em; }
+    h3 { font-size: 1.2em; }
+    p  { font-size: 1em; }
+
+}
