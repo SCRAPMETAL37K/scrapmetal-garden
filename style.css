@@ -53,10 +53,18 @@ body {
     overflow-wrap: break-word;
     word-break: break-word;
     overflow-x: hidden;
+
+    background-image: var(--bg-image);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
-::selection,
-::-moz-selection {
+::selection, ::-moz-selection {
     background: white;
     color: black;
 }
@@ -66,8 +74,21 @@ body {
           LAYOUT
    ===================== */
 
-.title,
-.container {
+.title, .container, .index, .ascii {
+
+    background: rgba(12, 12, 12, 0.85);
+    backdrop-filter: blur(10px) saturate(100%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.title, .container {
     max-width: 720px;
     width: 100%;
     margin: 0 auto;
@@ -75,16 +96,19 @@ body {
 }
 
 .title {
-    padding-top: 60px;
-    padding-bottom: 0;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
 .container {
+    padding-top: 24px;
+    padding-bottom: 24px;
     margin-top: 32px;
-    margin-bottom: 80px;
+    margin-bottom: 0;
 }
 
 .index {
@@ -95,8 +119,9 @@ body {
 }
 
 .ascii {
-    width: 100%;
-    margin: 60px 0;
+    width: fit-content;
+    margin: 32px auto 0;
+    padding: 16px;
     line-height: 1;
     text-align: center;
     font-size: clamp(0.35rem, 1.8vw, 1.125rem);
@@ -105,6 +130,7 @@ body {
 .ascii pre {
     white-space: pre;
     display: inline-block;
+    vertical-align: top;
     margin: 0;
     text-align: left;
 }
@@ -156,7 +182,8 @@ h3 {
 /* tighten spacing between sequential headings */
 h1 + h2 { margin-top: -2px; }
 h2 + h3 { margin-top: -4px; }
-h3 + p  { margin-top: 0;    }
+h3 + p  { margin-top: 0; }
+h2:first-child { margin-top: 0; }
 
 p {
     font-family: 'Inconsolata', monospace;
@@ -164,6 +191,10 @@ p {
     font-size: 1.125em;
     margin: 0 0 20px;
     overflow-wrap: break-word;
+}
+
+.title > *:last-child, .container > *:last-child {
+    margin-bottom: 0;
 }
 
 p.break {
@@ -207,9 +238,9 @@ pre {
 .link-white:visited { color: white; }
 .link-white:hover   { color: black; background-color: white; text-decoration: underline; }
 
-.link-secret         { color: #0c0c0c; }
-.link-secret:visited { color: #0c0c0c; }
-.link-secret:hover   { color: white; background-color: gray; text-decoration: underline; }
+.link-secret         { color: transparent; text-decoration: none; }
+.link-secret:visited { color: transparent; text-decoration: none; }
+.link-secret:hover   { color: black; background-color: gray; text-decoration: underline; }
 
 
 /* =====================
@@ -217,23 +248,31 @@ pre {
    ===================== */
 
 @media (max-width: 600px) {
-    .title,
-    .container,
-    .ascii {
+    body {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .title, .container {
         padding: 0 18px;
     }
 
     .title {
-        padding-top: 36px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 20px;
     }
 
     .container {
+        padding-top: 8px;
+        padding-bottom: 20px;
         margin-top: 20px;
-        margin-bottom: 48px;
+        margin-bottom: 0;
     }
 
     .ascii {
-        margin: 36px 0;
+        margin: 20px auto 0;
+        padding: 12px;
     }
 
     h1 { font-size: 2em; }
