@@ -65,8 +65,8 @@ body {
 }
 
 ::selection, ::-moz-selection {
-    background: white;
-    color: black;
+    background: #FFFFFF;
+    color: #000000;
 }
 
 
@@ -74,18 +74,11 @@ body {
           LAYOUT
    ===================== */
 
-.title, .container, .index, .ascii {
-
-    background: rgba(12, 12, 12, 0.85);
+.title, .container, .ascii {
+    background: rgba(12, 12, 12, 0.90);
     backdrop-filter: blur(10px) saturate(100%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
-    
-    box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.25),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border-radius: 8px;        
 }
 
 .title, .container {
@@ -109,13 +102,6 @@ body {
     padding-bottom: 24px;
     margin-top: 32px;
     margin-bottom: 0;
-}
-
-.index {
-    background-color: #0c0c0c;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
 }
 
 .ascii {
@@ -151,7 +137,7 @@ h1, h2, h3, p, pre {
 
 h1 {
     font-family: 'Inconsolata', monospace;
-    color: white;
+    color: #FFFFFF;
     font-weight: normal;
     font-size: 2.5em;
     margin: 0 0 4px;
@@ -161,7 +147,7 @@ h1 {
 h2 {
     font-family: 'NotoSans', sans-serif;
     letter-spacing: 1.5px;
-    color: white;
+    color: #FFFFFF;
     font-weight: bold;
     font-size: 2.25em;
     margin: 40px 0 8px;
@@ -171,7 +157,7 @@ h2 {
 h3 {
     font-family: 'NotoSans', sans-serif;
     letter-spacing: 1.5px;
-    color: rgb(146, 146, 146);
+    color: #929292;
     font-size: 1.375em;
     font-weight: normal;
     font-style: normal;
@@ -187,7 +173,7 @@ h2:first-child { margin-top: 0; }
 
 p {
     font-family: 'Inconsolata', monospace;
-    color: white;
+    color: #FFFFFF;
     font-size: 1.125em;
     margin: 0 0 20px;
     overflow-wrap: break-word;
@@ -203,7 +189,7 @@ p.break {
 
 pre {
     font-family: 'Inconsolata', monospace;
-    color: white;
+    color: #FFFFFF;
     font-size: 1em;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -216,31 +202,31 @@ pre {
 
 .link-blue         { color: #008BFF; }
 .link-blue:visited { color: #008BFF; }
-.link-blue:hover   { color: black; background-color: #008BFF; text-decoration: underline; }
+.link-blue:hover   { color: #000000; background-color: #008BFF; text-decoration: underline; }
 
 .link-red          { color: #FF3738; }
 .link-red:visited  { color: #FF3738; }
-.link-red:hover    { color: black; background-color: #FF3738; text-decoration: underline; }
+.link-red:hover    { color: #000000; background-color: #FF3738; text-decoration: underline; }
 
 .link-green         { color: #1ABE14; }
 .link-green:visited { color: #1ABE14; }
-.link-green:hover   { color: black; background-color: #1ABE14; text-decoration: underline; }
+.link-green:hover   { color: #000000; background-color: #1ABE14; text-decoration: underline; }
 
 .link-yellow         { color: #FF9C00; }
 .link-yellow:visited { color: #FF9C00; }
-.link-yellow:hover   { color: black; background-color: #FF9C00; text-decoration: underline; }
+.link-yellow:hover   { color: #000000; background-color: #FF9C00; text-decoration: underline; }
 
-.link-purple         { color: #d400ff; }
-.link-purple:visited { color: #d400ff; }
-.link-purple:hover   { color: black; background-color: #d400ff; text-decoration: underline; }
+.link-purple         { color: #D400FF; }
+.link-purple:visited { color: #D400FF; }
+.link-purple:hover   { color: #000000; background-color: #D400FF; text-decoration: underline; }
 
-.link-white         { color: white; }
-.link-white:visited { color: white; }
-.link-white:hover   { color: black; background-color: white; text-decoration: underline; }
+.link-white         { color: #FFFFFF; }
+.link-white:visited { color: #FFFFFF; }
+.link-white:hover   { color: #000000; background-color: #FFFFFF; text-decoration: underline; }
 
 .link-secret         { color: transparent; text-decoration: none; }
 .link-secret:visited { color: transparent; text-decoration: none; }
-.link-secret:hover   { color: black; background-color: gray; text-decoration: underline; }
+.link-secret:hover   { color: #000000; background-color: #FFFFFF; text-decoration: underline; }
 
 
 /* =====================
